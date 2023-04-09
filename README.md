@@ -116,7 +116,7 @@ There are 4 package and 1 folder resource in the source code:
  
   + controller: contain the HomeController, CartController, ProductController, CategoryController, BillController process for user and admin request
   
-  + dto: contain ProductDTO which will have the categoryid in it 
+  + dto: contain ProductDTO which will have the categoryid and product information in it 
   
   + model: 
   
