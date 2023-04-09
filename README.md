@@ -5,7 +5,7 @@
 
 User
 
-![user](https://user-images.githubusercontent.com/74971162/230763170-946201e1-406d-4e53-87f8-8013ef7dccad.png)
+![user](https://user-images.githubusercontent.com/74971162/230763190-5227235a-684d-448c-a5ca-e2e0d87bf13e.png)
 
 
 ## Installation
