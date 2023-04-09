@@ -1,3 +1,4 @@
 # JavaTechnology-midterm
 ## ERD
-![alt text](file://D:/#CNJava/TH/midtermproject/image/erd.png)
+
+![erd](https://user-images.githubusercontent.com/74971162/230759390-5cad6c94-b15d-4f07-8d52-3a676a422575.png)
