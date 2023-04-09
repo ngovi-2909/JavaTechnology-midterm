@@ -107,7 +107,7 @@ Edit Product: http://localhost:8080/admin/product/edit/{id} -> method Get
 
 The application for any kind of user can buy product and just provide pay by cash, user after choose product they like the application will direct to checkout page when the user want to checkout products. User can search products by category, brands, colors and price also they can remove product from shopping cart if they do not want to buy anymore. User do not need to create an account to buy products. 
 
-The login page just for admin who want to go to the admin page to manage the application. If admin does not login and want to go to the admin page the application will not let it happend because to avoid any user will find the admin page and destroy the application, I did configure the spring security just for admin use it and it only have 1 account for admin so it does not have any register page. Admin will have permission to add, edit and delete category and product also delete the bill order of user.
+The login page just for admin who want to go to the admin page to manage the application. If admin does not login and want to go to the admin page the application will not let it happend because to avoid any user will find the admin page and destroy the application, I did configure the spring security just for admin use it and it only has 1 account for admin so it does not have any register page. Admin will have permission to add, edit and delete category and product also delete the bill order of user.
 
 ## Code stucture 
 There are 4 package and 1 folder resource in the source code:
