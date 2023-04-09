@@ -3,6 +3,11 @@
 ![erd](https://user-images.githubusercontent.com/74971162/230759390-5cad6c94-b15d-4f07-8d52-3a676a422575.png)
 ## Flow Chart
 
+User
+
+![user](https://user-images.githubusercontent.com/74971162/230763170-946201e1-406d-4e53-87f8-8013ef7dccad.png)
+
+
 ## Installation
 You can use your favorite IDE (IntelliJ/Esclipse) to run the application
 
