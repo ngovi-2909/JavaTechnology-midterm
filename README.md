@@ -111,47 +111,47 @@ There are 4 package and 1 folder resource in the source code:
   
   + model: 
   
-      contain BillOrder: id of bill, name of products customer buy, total money they will pay. Name, address, age, phone of customer  
+      - contain BillOrder: id of bill, name of products customer buy, total money they will pay. Name, address, age, phone of customer  
       
-      Category: id and name of category
+      - Category: id and name of category
       
-      Product: id, name, price, brand, color, image(the name of path of product) of product
+      - Product: id, name, price, brand, color, image(the name of path of product) of product
       
-      Customer: id, name, age, address, phone of customer
+      - Customer: id, name, age, address, phone of customer
       
-      ProductCart: id of productCart, name of product customer choose; price, brand, color, image of product; subtotal base on the quantity they choose
+      - ProductCart: id of productCart, name of product customer choose; price, brand, color, image of product; subtotal base on the quantity they choose
       
   + repository: BillOrderRepository, CategoryRepository, CustomerRepository, ProductCartRepository, ProductRepository
   
   + service: 
  
-      interface BillOrderService: getAllBill(), addBill(BillOrder billOrder), removeBillById(long id), getBillById(long id)
+      - interface BillOrderService: getAllBill(), addBill(BillOrder billOrder), removeBillById(long id), getBillById(long id)
       
-      BillOrderServiceImpl: implements all methods of BillOrderService
+      - BillOrderServiceImpl: implements all methods of BillOrderService
       
-      interface CategoryService: getAllCategory(), addCategory(Category category), removeCategoryById(long id), getCategoryById(long id)
+      - interface CategoryService: getAllCategory(), addCategory(Category category), removeCategoryById(long id), getCategoryById(long id)
       
-      CategoryServiceImpl: implements all methods of CategoryService
+      - CategoryServiceImpl: implements all methods of CategoryService
       
-      interface CustomerService: getAllCustomer(), addCustomer(Customer customer), removeCustomerById(long id), getCustomerById(long id)
+      - interface CustomerService: getAllCustomer(), addCustomer(Customer customer), removeCustomerById(long id), getCustomerById(long id)
       
-      CustomerServiceImpl: implements all methods of CustomerService
+      - CustomerServiceImpl: implements all methods of CustomerService
       
-      interface ProductCartService: getAllProductCart(), addProductCart(ProductCart productCart), removeProductCartById(long id), getProductCartById(long id),               removeAllProductCart()
+      - interface ProductCartService: getAllProductCart(), addProductCart(ProductCart productCart), removeProductCartById(long id), getProductCartById(long id),               removeAllProductCart()
       
-      ProductCartServiceImpl: implements all methods of ProductCartService
+      - ProductCartServiceImpl: implements all methods of ProductCartService
       
-      interface ProductService: getAllProduct(), addProduct(Product product), removeProductById(long id), getProductById(long id), searchProductByName(String ar)
+      - interface ProductService: getAllProduct(), addProduct(Product product), removeProductById(long id), getProductById(long id), searchProductByName(String ar)
       
-      ProductServiceImpl: implements all methods of ProductService
+      - ProductServiceImpl: implements all methods of ProductService
       
   + resources: 
  
-      static: folders css, image, javascript
+      - static: folders css, image, javascript
       
-      templates: contains file html
+      - templates: contains file html
       
-      application.properties
+      - application.properties
 
 
 
