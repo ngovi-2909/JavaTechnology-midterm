@@ -158,7 +158,7 @@ There are 4 package and 1 folder resource in the source code:
  
       - static: folders css, image, javascript
       
-      - templates: contains file html
+      - templates: contain html files
       
       - application.properties
 
