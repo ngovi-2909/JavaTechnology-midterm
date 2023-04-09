@@ -1,3 +1,3 @@
 # JavaTechnology-midterm
-##ERD
-![image info](./D:/#CNJava/TH/midtermproject/image/erd.png)
+## ERD
+![alt text](file://D:/#CNJava/TH/midtermproject/image/erd.png)
