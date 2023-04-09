@@ -78,7 +78,7 @@ Checkout product: http://localhost:8080/home/cart/checkout -> method Get
 
 Thank you page after checkout: http://localhost:8080/home/cart/checkout/thanks -> method Post 
 
-Login Page: http://localhost:8080/login -> Spring security force user to login page cause cannot go to the admin page without login the login page just accept the admin with username and password is admin, usual user cannot go to admin page
+Login Page: http://localhost:8080/login -> Spring security force user to login page because admin can not go to the admin page without login the login page just accept the admin account with username and password is admin, usual user cannot go to admin page
 
 ### Admin
 Admin Page: http://localhost:8080/admin -> Spring security redirect after check the login information
