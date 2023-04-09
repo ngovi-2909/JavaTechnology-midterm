@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>  
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js}"></script>
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js}" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <script th:src="@{/javascript/script.js}"></script>
+    <script type="text/javascript" th:src="@{https://kit.fontawesome.com/3b1ca000cb.js}"></script>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <section class="contenedor_proyectos row">
+        <h1 class="text-center" style="margin-bottom: 0px">VIMON</h1>
+        <div class="login_header col-md-12 col-xs-12" style="text-align: right">
+          <a style="font-weight: bold" th:href="@{/login}">Log in</a>
+          <i class="fa fa-sign-in" style="font-size: 25px" aria-hidden="true"></i>
+        </div>
+        <div class="galeria col-md-12 col-xs-12">
+          <div class="categoria">
+            <nav class="navbar navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a th:href="@{/}" class="categoria_item" category="all">ALL</a></li>
+                <li th:each="category: ${categories}"><a href="#" class="categoria_item" th:category="${category.name}" th:text="${category.name}">Shirts</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+          </div><!--Termina div menu-->
+
+            <div class="search__bar__header col-md-8">
+              <form th:action="@{/home/search}" method="post">
+                <input type="text" name="nameofproduct">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </form>
+            </div>
+              <div class="cart__header__desktop col-md-1" >
+                <a th:href="@{/home/cart}"><i class="fas fa-shopping-cart"></i></a>
+              </div>
+
+          <div class="col-md-2 col-xs-2">
+            <form th:action="@{/home/filter}" method="post" class="p-1">
+              <section class="mt-2">
+                <span class="text-muted font-weight-bold">BRANDS</span>
+                <div class="col-12">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customradio" name="customRadio" value="all" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customradio" th:value="all" >All</label>
+                  </div>
+                  <div class="custom-control custom-radio" th:each="brand: ${brands}">
+                    <input type="radio" th:id="${brand}" name="customRadio" th:value="${brand}" class="custom-control-input">
+                    <label class="custom-control-label" th:for="${brand}" th:text="${brand}">BuckMason</label>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <span class="text-muted font-weight-bold">COLOR</span>
+                <div class="col-12">
+                  <select class="form-select" aria-label="multiple select example" name="productcolor">
+                    <option selected th:value="all">All</option>
+                    <option th:each="color: ${colors}" th:value="${color}" th:text="${color}">Two</option>
+                  </select>
+                </div>
+              </section>
+              <section class="mt-2">
+                <span class="text-muted font-weight-bold">PRICE RANGE</span>
+                <div class="d-flex-block" style="width: 60%">
+                  <input type="number" name="min"  class="form-control mb-2" placeholder="min $"/>
+                  <input type="number" name="max"  class="form-control " placeholder="max $"/>
+                </div>
+              </section>
+              <br>
+              <section class="mt-2">
+                <button class="btn btn-warning" type="submit">Apply</button>
+              </section>
+            </form>
+          </div>
+          <div class="proyectos col-md-10 col-xs-12 text-center">
+            <div class="proyectos_item col-md-3 col-xs-12" th:category="${product.category.name}" th:each="product: ${products}">
+              <img class="col-md-12 col-xs-12 img-responsive" th:src="@{${'/image/' + product.image}}" alt="">
+              <a class="col-md-12 col-xs-12" th:href="@{/home/product/detail/{id}(id=${product.id})}" th:text="${product.name} + ' '+${product.price} + '$'"></a>
+          </div>
+        </div>
+        </div>
+    </section>
+    </div>
+
+
+  
+  </body>
+</html>

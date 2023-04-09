@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+  <title>List of bill</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}">
+  <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+  <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js}"></script>
+  <script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+</head>
+<body style="background-color: #f8f8f8">
+
+<div class="container-fluid p-5">
+  <div class="row mb-5">
+    <div class="col-md-6">
+      <h3>Bill Management</h3>
+    </div>
+    <div class="col-md-6 text-right">
+      Hello <span class="text-danger">Admin</span> |<a th:href="@{/admin}">Admin Home</a>| <a th:href="@{/}" >Logout</a>
+    </div>
+  </div>
+  <div class="col-md-10" style="margin: auto">
+    <h4 class="text-success">List of bill</h4>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Name of Product</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="bill : ${billorders}">
+        <td th:text="${bill.id}">1</td>
+        <td th:text="${bill.customerName}">BuckMason Pant</td>
+        <td th:text="${bill.age}">BuckMason Pant</td>
+        <td th:text="${bill.address}">BuckMason Pant</td>
+        <td th:text="${bill.phone}">BuckMason Pant</td>
+        <td th:text="${bill.name}">BuckMason Pant</td>
+        <td th:text="${bill.total} + '$'">BuckMason Pant</td>
+        <td>
+          <a th:href="@{/admin/bill/delete/{id}(id=${bill.id})}">Delete</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

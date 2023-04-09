@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <title>List of product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}">
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js}"></script>
+    <script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+</head>
+<body style="background-color: #f8f8f8">
+
+<div class="container-fluid p-5">
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <h3>Product Management</h3>
+        </div>
+        <div class="col-md-6 text-right">
+            Hello <span class="text-danger">Admin</span> |<a th:href="@{/admin}">Admin Home</a>| <a th:href="@{/}">Logout</a>
+        </div>
+    </div>
+        <div class="col-md-10" style="margin: auto">
+            <a th:href="@{/admin/product/add}" class="btn btn-primary">Add Product</a>
+            <br>
+            <br>
+            <h4 class="text-success">List of product</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Brand</th>
+                    <th>Color</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.id}">1</td>
+                    <td><img th:src="@{${'/image/' + product.image}}" width="100" height="100"></img></td>
+                    <td th:text="${product.name}">BuckMason Pant</td>
+                    <td th:text="${product.category.name}">BuckMason Pant</td>
+                    <td th:text="${product.price} + '$'"></td>
+                    <td th:text="${product.brand}">BuckMason</td>
+                    <td th:text="${product.color}">Brown</td>
+                    <td>
+                        <a th:href="@{/admin/product/edit/{id}(id=${product.id})}">Edit</a> |
+                        <a th:href="@{/admin/product/delete/{id}(id=${product.id})}">Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
+</body>
+</html>

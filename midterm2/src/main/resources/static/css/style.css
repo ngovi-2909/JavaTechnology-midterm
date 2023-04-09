@@ -1,0 +1,125 @@
+body{
+  background: #e0e4e5;
+  font-family: 'Open Sans', sans-serif;
+}
+.navbar-nav{
+  width: 100%;
+  text-align: center;
+}
+.navbar-nav li{
+  float: none;
+  display: inline-block;
+}
+.contenedor_proyectos{
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+}
+.contenedor_proyectos h1{
+  color: #494B4D;
+  font-weight: 400;
+  margin: 15px 0px;
+}
+.categoria .categoria_item_active{
+  background: #fff;
+}
+
+.search__bar__header {
+  width: 90%;
+  padding-bottom: 5%;
+  padding-left: 20%;
+}
+
+.search__bar__header input[type="text"] {
+  width: 80%;
+  padding: 13px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 2px #f79831;
+}
+
+@media (max-width: 576px) {
+  .search__bar__header input[type="text"] {
+    padding: 8px;
+  }
+}
+
+.search__bar__header button[type="submit"]{
+  padding: 13px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 2px #f79831;
+  cursor:pointer;
+}
+
+@media (max-width: 576px) {
+  .search__bar__header button[type="submit"] {
+    padding: 9px;
+    font-size: 0.7em;
+  }
+}
+
+.cart__header__desktop {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.cart__header__desktop i {
+  font-size: 2em;
+  padding-top: 10px;
+  cursor:pointer;
+}
+
+@media (max-width: 576px) {
+  .cart__header__desktop i {
+    padding-top: 10px;
+    font-size: 2em;
+  }
+}
+
+.cart__header__desktop span {
+  background-color: #f79831;
+  padding: 3px 6px;
+  margin-left: 3px;
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 19px;
+}
+
+@media (max-width: 576px) {
+  .cart__header__desktop span {
+    font-size: 0.7em;
+    padding: 1px 4px;
+  }
+}
+
+
+/*======================================
+              Proyectos
+======================================*/
+
+.proyectos{
+  padding: 0% 3% 0% 0%;
+}
+.proyectos .proyectos_item{
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
+  padding: 0px;
+  width: 22%;
+  margin-left:3%;
+  margin-bottom: 25px;
+  transition: all .4s;
+}
+.proyectos .proyectos_item img{
+  padding: 0px;
+}
+.proyectos .proyectos_item a{
+  display: block;
+  width: 100%;
+  padding: 5px;
+  background: #000;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+}
