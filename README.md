@@ -7,6 +7,10 @@ User
 
 ![user](https://user-images.githubusercontent.com/74971162/230763190-5227235a-684d-448c-a5ca-e2e0d87bf13e.png)
 
+Admin
+
+![admin](https://user-images.githubusercontent.com/74971162/230764500-0744ede8-8663-472c-bf63-64df0f069e0e.png)
+
 
 ## Installation
 You can use your favorite IDE (IntelliJ/Esclipse) to run the application
