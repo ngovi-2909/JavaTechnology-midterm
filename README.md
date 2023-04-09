@@ -80,7 +80,7 @@ The application for any kind of user can buy product and just provide pay by cas
 The login page just for admin who want to go to the admin page to manage the application. If admin does not login and want to go to the admin page the application will not let it happend because to avoid any user will find the admin page and destroy the application, I did configure the spring security just for admin use it and it only have 1 account for admin so it does not have any register page. Admin will have permission to add, edit and delete category and product also delete the bill order of user.
 
 ## Code stucture 
-There are 4 package in the source code:
+There are 4 package and 1 folder resource in the source code:
   + config: contain the spring security configuration
   + controller: contain the HomeController, CartController, ProductController, CategoryController, BillController process for user and admin request
   + dto: contain ProductDTO which will have the categoryid in it 
