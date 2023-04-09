@@ -68,7 +68,7 @@ Filter Product: http://localhost:8080/home/filter -> method Post
 
 Search Product: http://localhost:8080/home/search -> method Post
 
-View Product Detail: http://localhost:8080/home/product/detail/2 -> method Get
+View Product Detail: http://localhost:8080/home/product/detail/{id} -> method Get
 
 Add Product to Cart: htt://localhost:8080/home/cart/add/{id} -> method Post
 
