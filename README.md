@@ -70,7 +70,7 @@ Search Product: http://localhost:8080/home/search -> method Post
 
 View Product Detail: http://localhost:8080/home/product/detail/{id} -> method Get
 
-Add Product to Cart: htt://localhost:8080/home/cart/add/{id} -> method Post
+Add Product to Cart: http://localhost:8080/home/cart/add/{id} -> method Post
 
 View Cart: http://localhost:8080/home/cart -> method Get
 
